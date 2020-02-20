@@ -20,9 +20,17 @@ with open(budget_data_csv) as csvfile:
         print("Total Months: " + str(row_count))
         row_count = 0
     
-        total = int(row[1])
-        print(str(total))
+    #create array
+    #add values in row 2 to array
+    #sum values in array
+    
+        profit = []
+        for row in csvreader:
+            if int(row[1]) > 0:
+                profit_value = row[1]
+                profit.append(profit_value)
+                print(profit)
 
         # Convert row to float and compare to grams of fiber
-        #if int(row[1]) > 5:
+        # if int(row[1]) > 5:
             #print(row[1])
